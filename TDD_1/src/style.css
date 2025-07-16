@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-bar {
+  background-color: #000; /* 검정색 배경 */
+  color: #fff; /* 텍스트 흰색 */
+  height: 56px; /* 탭바 높이 */
+  width: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* 예시로 흰 배경 원형 */
+  color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 480px; /* 모바일 폭 제한 */
+  margin: 0 auto; /* 가운데 정렬 */
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* 좌우 정렬 */
+  align-items: center;
+  padding: 0 16px; /* 좌우 여백 */
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  background: url("cart-icon.svg") no-repeat center/cover;
+  cursor: pointer;
+}
+
+.product-list .container .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-list .container .card {
+  border: 1px solid #000;
+  border-radius: 30px;
+  height: 300px;
+  width: 220px;
+  padding: 5px;
+  margin-bottom: 30px;
+}
