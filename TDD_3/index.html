@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Static JSON API Example</title>
+  </head>
+  <body>
+    <h1>📦 정적 JSON API 테스트</h1>
+    <pre id="output">Loading...</pre>
+
+    <script>
+      fetch("https://productcardapi.vercel.app/data.json")
+        .then((response) => response.json()) // JSON으로 파싱
+        .then((data) => {
+          // 예: 첫 번째 제품의 id 출력
+          console.log(data.photo[0].id);
+          console.log(data.photo.length);
+          console.log(data.photo[0].name);
+          document.getElementById("output").textContent =
+            "첫 번째 상품 ID: " +
+            data.photo[0].id +
+            "\n\n" +
+            JSON.stringify(data, null, 2);
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("output").textContent =
+            "데이터를 불러올 수 없습니다.";
+        });
+    </script>
+  </body>
+</html>
